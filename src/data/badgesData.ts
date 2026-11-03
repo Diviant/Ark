@@ -1,0 +1,253 @@
+import { BadgeDef, SurvivalLevel } from '../types';
+
+export const SURVIVAL_LEVELS: SurvivalLevel[] = [
+  {
+    levelNumber: 1,
+    title: { en: 'Novice Wanderer', de: 'Anfänger-Wanderer', ru: 'Новичок-путник' },
+    minXP: 0,
+    maxXP: 300,
+    badgeIcon: 'Compass',
+  },
+  {
+    levelNumber: 2,
+    title: { en: 'Wilderness Apprentice', de: 'Wildnis-Lernender', ru: 'Ученик леса' },
+    minXP: 300,
+    maxXP: 750,
+    badgeIcon: 'Trees',
+  },
+  {
+    levelNumber: 3,
+    title: { en: 'Field Survivor', de: 'Feld-Überlebender', ru: 'Полевой выживатель' },
+    minXP: 750,
+    maxXP: 1500,
+    badgeIcon: 'Axe',
+  },
+  {
+    levelNumber: 4,
+    title: { en: 'Bushcraft Craftsman', de: 'Bushcraft-Handwerker', ru: 'Мастер бушкрафта' },
+    minXP: 1500,
+    maxXP: 2500,
+    badgeIcon: 'Flame',
+  },
+  {
+    levelNumber: 5,
+    title: { en: 'Autonomous Prepper', de: 'Autonomer Prepper', ru: 'Автономный преппер' },
+    minXP: 2500,
+    maxXP: 4000,
+    badgeIcon: 'ShieldAlert',
+  },
+  {
+    levelNumber: 6,
+    title: { en: 'Master Survivalist', de: 'Meister-Überlebender', ru: 'Мастер выживания' },
+    minXP: 4000,
+    maxXP: 10000,
+    badgeIcon: 'Award',
+  },
+];
+
+export const BADGES_CATALOG: BadgeDef[] = [
+  {
+    id: 'badge-10-articles-read',
+    title: { en: 'Voracious Reader', de: 'Eifriger Leser', ru: 'Начитанный выживатель' },
+    description: {
+      en: 'Read and explored 10 or more practical field manuals.',
+      de: '10 oder mehr Feldführer gelesen und erkundet.',
+      ru: 'Прочитано и изучено 10 или более полевых руководств.',
+    },
+    iconName: 'BookOpen',
+    category: 'general',
+    xpReward: 300,
+    requirementHint: {
+      en: 'Read 10+ Field Articles in Encyclopedia',
+      de: 'Lese 10+ Artikel in der Enzyklopädie',
+      ru: 'Прочитайте 10+ статей в Энциклопедии',
+    },
+  },
+  {
+    id: 'badge-first-aid-expert',
+    title: { en: 'First Aid Expert', de: 'Erste-Hilfe-Experte', ru: 'Эксперт первой помощи' },
+    description: {
+      en: 'Mastered all essential wilderness First Aid and medical protocols.',
+      de: 'Alle Erste-Hilfe-Protokolle gemeistert.',
+      ru: 'Изучены все ключевые протоколы экстренной первой помощи.',
+    },
+    iconName: 'HeartPulse',
+    category: 'first_aid',
+    xpReward: 350,
+    requirementHint: {
+      en: 'Master all First Aid Field Guides',
+      de: 'Lerne alle Erste-Hilfe-Anleitungen',
+      ru: 'Изучите все статьи из категории Первая помощь',
+    },
+  },
+  {
+    id: 'badge-fire-starter',
+    title: { en: 'Fire Master', de: 'Feuermeister', ru: 'Мастер огня' },
+    description: {
+      en: 'Mastered fire ignition and heat reflector field guides.',
+      de: 'Feuerzündung und Wärmereflektoren gemeistert.',
+      ru: 'Освоены инструкции по разведению огня и тепловым экранам.',
+    },
+    iconName: 'Flame',
+    category: 'fire',
+    xpReward: 150,
+    requirementHint: {
+      en: 'Mark 2+ Fire & Heat guides as Mastered',
+      de: 'Markiere 2+ Feuer-Anleitungen als gelernt',
+      ru: 'Отметьте изученными минимум 2 инструкции по Огню',
+    },
+  },
+  {
+    id: 'badge-water-purifier',
+    title: { en: 'Hydration Specialist', de: 'Wasser-Spezialist', ru: 'Специалист по воде' },
+    description: {
+      en: 'Mastered water procurement, multi-stage filtration, and boiling procedures.',
+      de: 'Wasseraufbereitung und Filtration gemeistert.',
+      ru: 'Изучены способы фильтрации, кипячения и получения воды.',
+    },
+    iconName: 'Droplets',
+    category: 'water',
+    xpReward: 150,
+    requirementHint: {
+      en: 'Mark 2+ Water guides as Mastered',
+      de: 'Markiere 2+ Wasser-Anleitungen als gelernt',
+      ru: 'Отметьте изученными 2+ инструкции по Воде',
+    },
+  },
+  {
+    id: 'badge-shelter-builder',
+    title: { en: 'Shelter Architect', de: 'Unterkunfts-Architekt', ru: 'Строитель укрытий' },
+    description: {
+      en: 'Mastered emergency shelters (Debris Hut, Tarp pitch, Snow cave).',
+      de: 'Notunterkünfte und Tarp-Aufbau gemeistert.',
+      ru: 'Изучены конструкции лесных укрытий и тентов.',
+    },
+    iconName: 'Tent',
+    category: 'shelters',
+    xpReward: 200,
+    requirementHint: {
+      en: 'Mark 2+ Shelter guides as Mastered',
+      de: 'Markiere 2+ Notunterkunfts-Anleitungen als gelernt',
+      ru: 'Отметьте изученными 2+ инструкции по укрытиям',
+    },
+  },
+  {
+    id: 'badge-backpack-packed',
+    title: { en: '72h Evacuation Ready', de: '72h Fluchtbereit', ru: 'Готовность к 72ч эвакуации' },
+    description: {
+      en: 'Packed at least 8 essential Bug-Out Bag items in checklist.',
+      de: 'Mindestens 8 Fluchtrucksack-Teile gepackt.',
+      ru: 'Собрано минимум 8 предметов тревожного рюкзака.',
+    },
+    iconName: 'Sliders',
+    category: 'prepper',
+    xpReward: 250,
+    requirementHint: {
+      en: 'Check off 8+ items in Emergency Backpack',
+      de: 'Hake 8+ Artikel im Fluchtrucksack ab',
+      ru: 'Отметьте 8+ предметов в Тревожном рюкзаке',
+    },
+  },
+  {
+    id: 'badge-calc-complete',
+    title: { en: 'Autonomy Planner', de: 'Autonomie-Planer', ru: 'Планировщик автономности' },
+    description: {
+      en: 'Calculated exact household water, food, and power reserves.',
+      de: 'Exakte Haushalts-Vorräte berechnet.',
+      ru: 'Рассчитаны суточные запасы воды, рационов и питания для семьи.',
+    },
+    iconName: 'Calculator',
+    category: 'tools',
+    xpReward: 200,
+    requirementHint: {
+      en: 'Run the Survival Reserve Calculator',
+      de: 'Nutze den Survival-Rechner',
+      ru: 'Воспользуйтесь Калькулятором автономных запасов',
+    },
+  },
+  {
+    id: 'badge-preparedness-audit',
+    title: { en: 'Resilient Refuge', de: 'Resilienter Zufluchtsort', ru: 'Устойчивое домохозяйство' },
+    description: {
+      en: 'Completed Preparedness Audit with a resilience score above 60%.',
+      de: 'Vorsorge-Audit mit über 60% absolviert.',
+      ru: 'Пройден аудит готовности с результатом более 60%.',
+    },
+    iconName: 'ShieldCheck',
+    category: 'prepper',
+    xpReward: 300,
+    requirementHint: {
+      en: 'Score 60%+ in Preparedness Audit',
+      de: 'Erreiche 60%+ im Vorsorge-Audit',
+      ru: 'Наберите 60%+ в Аудите готовности',
+    },
+  },
+  {
+    id: 'badge-wayfinder',
+    title: { en: 'Master Wayfinder', de: 'Kompass-Navigator', ru: 'Мастер навигации' },
+    description: {
+      en: 'Mastered topographic map reading, compass bearings, and celestial navigation.',
+      de: 'Karte, Kompass und Sternen-Orientierung gemeistert.',
+      ru: 'Освоены карта, компас и ориентирование по ночному небу.',
+    },
+    iconName: 'Compass',
+    category: 'navigation',
+    xpReward: 150,
+    requirementHint: {
+      en: 'Mark 2+ Navigation guides as Mastered',
+      de: 'Markiere 2+ Orientierungs-Anleitungen als gelernt',
+      ru: 'Отметьте изученными 2+ инструкции по Навигации',
+    },
+  },
+  {
+    id: 'badge-first-aid',
+    title: { en: 'Wilderness Medic', de: 'Wildnis-Sanitäter', ru: 'Полевой медик' },
+    description: {
+      en: 'Mastered hypothermia treatment, snakebites, and limb splinting protocols.',
+      de: 'Erste Hilfe bei Unterkühlung und Verletzungen gemeistert.',
+      ru: 'Изучены протоколы первой помощи при переохлаждении и травмах.',
+    },
+    iconName: 'HeartPulse',
+    category: 'first_aid',
+    xpReward: 200,
+    requirementHint: {
+      en: 'Mark 2+ First Aid guides as Mastered',
+      de: 'Markiere 2+ Erste-Hilfe-Anleitungen als gelernt',
+      ru: 'Отметьте изученными 2+ инструкции по Первой помощи',
+    },
+  },
+  {
+    id: 'badge-comms-dispatcher',
+    title: { en: 'Emergency Operator', de: 'Notfunk-Operator', ru: 'Радиооператор связи' },
+    description: {
+      en: 'Accessed Field Mode emergency frequencies & Morse code generator.',
+      de: 'Notfunk-Frequenzen und Morsesignal im Feld-Modus genutzt.',
+      ru: 'Использован Полевой режим и радиочастоты спасателей.',
+    },
+    iconName: 'Radio',
+    category: 'fieldMode',
+    xpReward: 150,
+    requirementHint: {
+      en: 'Explore Field Mode tools',
+      de: 'Erkunde die Tools im Feld-Modus',
+      ru: 'Откройте Полевой режим и список радиочастот',
+    },
+  },
+  {
+    id: 'badge-scholar',
+    title: { en: 'Wilderness Scholar', de: 'Wildnis-Gelehrter', ru: 'Знаток дикой природы' },
+    description: {
+      en: 'Bookmarked or mastered 5 or more field articles.',
+      de: '5 oder mehr Anleitungen gespeichert oder gelernt.',
+      ru: 'Сохранено или изучено более 5 инструкций.',
+    },
+    iconName: 'Award',
+    category: 'general',
+    xpReward: 250,
+    requirementHint: {
+      en: 'Bookmark or Master 5+ Field Articles',
+      de: 'Speichere oder lerne 5+ Anleitungen',
+      ru: 'Добавьте в избранное или изучите 5+ статей',
+    },
+  },
+];

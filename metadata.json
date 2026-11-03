@@ -1,0 +1,6 @@
+{
+  "name": "WILDCRAFT — Survival & Self-Reliance",
+  "description": "International platform for wilderness survival, bushcraft, autonomous living, and emergency preparedness.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
